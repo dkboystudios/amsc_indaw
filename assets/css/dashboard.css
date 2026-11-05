@@ -1,0 +1,338 @@
+/* --- Portal Dashboard Base --- */
+body.dashboard-body {
+    background-color: #f1f5f9;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Topbar Layout --- */
+.topbar {
+    background-color: #00552b;
+    color: #ffffff;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.topbar-left, .topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.topbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+}
+
+.topbar-logo {
+    height: 32px;
+}
+
+.user-profile-menu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ffd700;
+}
+
+.user-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.btn-icon {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.btn-logout {
+    color: #ef4444;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 5px;
+}
+
+/* --- Dashboard Wrapper & Sidebar --- */
+.dashboard-wrapper {
+    display: flex;
+    flex: 1;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #ffffff;
+    border-right: 1px solid #e2e8f0;
+    padding: 20px 0;
+    transition: margin-left 0.3s ease;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 24px;
+    color: #64748b;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-item i {
+    font-size: 1.1rem;
+    width: 20px;
+}
+
+.nav-item:hover {
+    background-color: #f8fafc;
+    color: #00552b;
+}
+
+.nav-item.active {
+    background-color: #00552b;
+    color: #f8fafc;
+    border-left: 4px solid #ffd700;
+    font-weight: 600;
+}
+
+/* --- Content Panel --- */
+.dashboard-content {
+    flex: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.content-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content-header h2 {
+    color: #0f172a;
+    font-size: 1.5rem;
+}
+
+.text-muted {
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+.application-id-badge {
+    background-color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: 1px solid #e2e8f0;
+    font-size: 0.9rem;
+    color: #334155;
+}
+
+/* --- General Cards --- */
+.card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.card-header {
+    padding: 18px 24px;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-header h3 {
+    font-size: 1.05rem;
+    color: #0f172a;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.card-body {
+    padding: 24px;
+}
+
+/* --- Status Banners --- */
+.status-banner {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 24px;
+}
+
+.status-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    flex-shrink: 0;
+}
+
+.status-under-review {
+    border-left: 6px solid #f59e0b;
+}
+
+.status-under-review .status-icon {
+    background-color: #fef3c7;
+    color: #d97706;
+}
+
+.status-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #64748b;
+    letter-spacing: 0.5px;
+}
+
+.status-title {
+    font-size: 1.3rem;
+    color: #0f172a;
+    margin: 2px 0 6px;
+}
+
+.status-banner p {
+    font-size: 0.9rem;
+    color: #475569;
+}
+
+/* --- Progress Tracker --- */
+.progress-tracker {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    position: relative;
+}
+
+.tracker-step {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.step-marker {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #e2e8f0;
+    color: #64748b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.tracker-step.completed .step-marker {
+    background-color: #10b981;
+    color: #ffffff;
+}
+
+.tracker-step.active .step-marker {
+    background-color: #ffd700;
+    color: black;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.2);
+}
+
+.tracker-step.failed .step-marker {
+    background-color: #ff0000;
+    color: #ffffff;
+}
+
+.step-details h4 {
+    font-size: 0.95rem;
+    color: #0f172a;
+    margin-bottom: 2px;
+}
+
+.step-details p {
+    font-size: 0.8rem;
+    color: #64748b;
+}
+
+/* --- Program Choices List --- */
+.program-choices-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.choice-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 18px;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+}
+
+.choice-primary {
+    border-color: #bfdbfe;
+    background-color: #eff6ff;
+}
+
+.choice-badge {
+    background-color: #cbd5e1;
+    color: #334155;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 12px;
+    white-space: nowrap;
+}
+
+.choice-primary .choice-badge {
+    background-color: #00552b;
+    color: #ffffff;
+}
+
+.choice-details h4 {
+    font-size: 0.95rem;
+    color: #0f172a;
+}
+
+.choice-details p {
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+.btn-sm {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+}

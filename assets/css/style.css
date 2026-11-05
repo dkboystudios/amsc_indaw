@@ -1,0 +1,459 @@
+:root {
+    /* Primary AMSC Institutional Colors */
+    --primary: #00552b;            /* Deep Forest Green */
+    --primary-hover: #112d21;      /* Darker Forest Green */
+    --primary-accent: #ffd700;     /* AMSC Gold / Yellow */
+    --primary-accent-hover: #d97706; /* Darker Gold */
+
+    /* Secondary / Utility Greens & Yellows */
+    --bg-body: #f4f7f5;            /* Off-white with sublte green tint */
+    --card-bg: #ffffff;            /* Pure White */
+    --green-light: #e8f5e9;        /* Light Green for badges/alerts */
+    --yellow-light: #fef3c7;       /* Soft Yellow for highlights */
+
+    /* Typography & Borders */
+    --text-color: #1a2e26;         /* Very dark green-gray for body text */
+    --text-muted: #5c7068;        /* Soft green-gray for secondary text */
+    --border-color: #d1e2d9;       /* Muted green border */
+    --light-text-color: #ffffff;
+
+    /* Status Indicators */
+    --danger: #ef4444;
+    --success: #10b981;
+    --radius: 10px;
+    --shadow: 0 20px 25px -5px rgba(27, 67, 50, 0.15), 0 10px 10px -5px rgba(27, 67, 50, 0.05);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+}
+
+body.auth-body {
+    background: linear-gradient(135deg, #0f2a1d 0%, #1e3b29 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.auth-card {
+    background: var(--card-bg);
+    width: 100%;
+    max-width: 420px;
+    padding: 35px 30px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.auth-logo {
+    width: 80px;
+    height: auto;
+    margin-bottom: 12px;
+}
+
+.auth-header h2 {
+    color: var(--primary);
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.auth-header p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-top: 4px;
+}
+
+.auth-footer {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.auth-footer a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}
+
+/* --- Landing Page Base --- */
+body.landing-body {
+    background-color: #f8fafc;
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Header & Navbar --- */
+.navbar {
+    background-color: var(--primary);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--light-text-color);
+    font-size: 1.25rem;
+}
+
+.logo-img {
+    height: 38px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--light-text-color);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-accent);
+}
+
+.nav-auth-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+/* --- Hero Section --- */
+.hero {
+    background: linear-gradient(135deg, #0f2a17 0%, #1e3b21 100%);
+    color: #ffffff;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background-color: rgba(37, 235, 57, 0.2);
+    border: 1px solid rgba(37, 235, 77, 0.4);
+    color: #60fa7c;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.hero-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    color: #94a3b8;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+.hero-cta {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* --- Content Sections --- */
+.section {
+    padding: 80px 0;
+}
+
+.section-alt {
+    background-color: #ffffff;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 2rem;
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.section-title p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    margin-top: 6px;
+}
+
+/* --- Steps Grid --- */
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.step-card {
+    background-color: #ffffff;
+    padding: 30px 25px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border-color);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.step-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+}
+
+.step-icon {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(37, 99, 235, 0.1);
+    color: #00552b;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin: 0 auto 20px;
+}
+
+.step-card h3 {
+    font-size: 1.1rem;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.step-card p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+/* --- Colleges Grid --- */
+.colleges-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.college-card {
+    background-color: #f8fafc;
+    border: 1px solid var(--primary);
+    padding: 25px 20px;
+    border-radius: var(--radius);
+    text-align: center;
+    transition: border-color 0.2s ease;
+}
+
+.college-card:hover {
+    border-color: var(--primary-accent);
+}
+
+.college-icon {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 12px;
+}
+
+.college-card h3 {
+    font-size: 1rem;
+    color: var(--primary);
+    margin-bottom: 4px;
+}
+
+.college-card p {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-muted);
+}
+
+/* --- Footer --- */
+.footer {
+    background-color: var(--primary-accent);
+    color: black;
+    padding: 30px 0;
+    border-top: 1px solid #1e293b;
+    font-size: 0.9rem;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: black;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+/* --- Additional Component Button Utilities --- */
+.btn-outline {
+    background: transparent;
+    border: 3px solid white;
+    color: white;
+    text-decoration: none;
+}
+
+.btn-outline:hover {
+    background-color: #f1f5f9;
+    color:#00552b;
+}
+
+.btn-secondary {
+    background-color: #334155;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.btn-secondary:hover {
+    background-color: #1e293b;
+}
+
+.btn-lg {
+    padding: 14px 28px;
+    font-size: 1rem;
+}
+
+
+.btn-primary {
+    background-color: var(--primary);
+    color: black;
+    text-decoration: none;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+}
+
+.btn-primary:active {
+    transform: scale(0.99);
+}
+
+/* ===========================================
+     SNACKBAR STYLING
+   =========================================== */
+
+.snackbar {
+    position: fixed;
+    bottom: -100px;
+    right: 30px;
+    min-width: 320px;
+    max-width: 450px;
+    padding: 14px 20px;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+    z-index: 9999;
+    transition: bottom 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s ease;
+    opacity: 0;
+}
+
+.snackbar.show {
+    bottom: 30px;
+    opacity: 1;
+}
+
+/* Snackbar Variants matching e-VOTE Theme */
+.snackbar-success {
+    background-color: #0b5d2a;
+    border-left: 6px solid #2ecc71;
+}
+
+.snackbar-error {
+    background-color: #8b0000;
+    border-left: 6px solid #e74c3c;
+}
+
+.snackbar-warning {
+    background-color: #b8860b;
+    border-left: 6px solid #f1c40f;
+}
+
+.snackbar-info {
+    background-color: #1f4e5b;
+    border-left: 6px solid #3498db;
+}
+
+.snackbar-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.snackbar-close {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.snackbar-close:hover {
+    opacity: 1;
+}

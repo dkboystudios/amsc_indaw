@@ -1,0 +1,57 @@
+amsc_indaw/
+|--- assets/
+|    |--- css/    
+|    |    |--- style.css          # Main stylesheet (global variables, resets, layout)
+|    |    |--- components.css     # Buttons, cards, modals, tables, forms, glassmorphism
+|    |    |--- dashboard.css      # Admin and applicant portal layouts
+|    |--- js/
+|    |    |--- main.js            # Global scripts (UI toggle, notifications)
+|    |    |--- admission.js       # Multi-step forms, document upload preview
+|    |    |--- admin.js           # Verification actions, filtering, modal management
+|    |--- fontawesome/
+|    |    |--- css/
+|    |    |    |--- all.min.css   # Local Font Awesome CSS
+|    |    |--- webfonts/          # Font Awesome icon files
+|    |--- images/
+|    |    |--- logo.png           # AMSC InnDaw logo
+|    |    |--- default-avatar.png # Default user profile images
+|    |--- documents/
+|    |--- profiles/
+|
+|--- config/
+|    |--- db.php                  # MySQLi database connection ($conn)
+|    |--- constants.php           # APP URL, title, upload paths, status definitions
+|
+|--- includes/
+|    |--- header.php              # Top navigation & meta tags
+|    |--- sidebar.php             # Role-based side navigation
+|    |--- footer.php              # Footer & script includes
+|    |--- auth_check.php          # Session validation and RBAC middleware
+|    |--- functions.php           # Procedural helper functions (sanitize, alerts, file handlers)
+|
+|--- actions/                     # Form handler scripts (POST requests)
+|    |--- auth_action.php         # Handles login, registration, logout
+|    |--- applicant_action.php    # Handles application details & document uploads
+|    |--- admin_action.php        # Handles document verification, approvals, student ID generation
+|    |--- academic_action.php     # Handles colleges, programs, subjects, curriculum management
+|
+|--- applicant/                   # Applicant/Student Portal Views
+|    |--- dashboard.php           # Application status overview & quick links
+|    |--- profile.php             # Fill profile details & program choices
+|    |--- documents.php           # Requirement upload and status checker
+|    |--- subjects.php            # View enrolled subjects and section schedules
+|    |--- print_com.php           # Printable Certificate of Matriculation / Enrollment Form
+|
+|--- admin/                       # Administrative Portal Views
+|    |--- dashboard.php           # System analytics, applicant counts, quick metrics
+|    |--- applicants.php          # List, filter, and review applications
+|    |--- verify_applicants.php   # Document review page (Approve/Reject & remarks)
+|    |--- students.php            # Enrolled students directory and ID generator
+|    |--- programs.php            # Manage Colleges, Programs, and subjects
+|    |--- curriculum.php          # Manage Curricula & Academic Years
+|    |--- database.php            # Database backup & restore utilities
+|
+|--- index.php                    # Public landing page
+|--- login.php                    # Account login page
+|--- register.php                 # Account registration page
+|--- logout.php                   # Session destruction script
